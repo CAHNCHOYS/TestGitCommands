@@ -12,4 +12,3 @@ function wordRating(str) {
     return splitt[maxIndex];
 }
 let res2 = wordRating("Nancy is very pretty.");
-console.log(res2);
