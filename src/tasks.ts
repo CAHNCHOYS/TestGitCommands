@@ -90,4 +90,18 @@ String.prototype.includes = function (str: string, position = 0) {
   return false;
 };
 
+String.prototype.startsWith = function(str: string, position = 0){
+  return this.slice(0, str.length) === str;
+}
+
+String.prototype.endsWith = function(str: string, position = 0){
+  console.log(this.slice(-(str.length), this.length));
+  
+  return this.slice(-(str.length), this.length) === str;
+}
+
 console.log("Hello from ALex".includes("from"));
+
+console.log("Tree AM ALEX".startsWith("Tree"));
+
+console.log("Tree AM ALEX".endsWith("ALEX"));
