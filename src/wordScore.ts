@@ -12,7 +12,6 @@ function wordRating(str: string){
         },0));
         
     }
-
    
     let maxIndex = asciis.indexOf(Math.max(...asciis));
 
