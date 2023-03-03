@@ -29,4 +29,3 @@ function wordRating(str: string){
 
 let res2 = wordRating("Nancy is very pretty.");
 
-console.log(res2);
