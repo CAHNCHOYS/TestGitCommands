@@ -1,59 +1,5 @@
 "use strict";
 function selectLetters(str1, str2) {
-    const toUpper = [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L",
-        "M",
-        "O",
-        "P",
-        "Q",
-        "R",
-        "S",
-        "T",
-        "U",
-        "V",
-        "W",
-        "X",
-        "Y",
-        "Z",
-    ];
-    const toLower = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ];
     let res = "";
     for (let index = 0; index < str1.length; index++) {
         if (str2[index]) {
@@ -118,3 +64,13 @@ function mostFrequent(arr) {
     let max = Math.max(...Object.values(obj));
     return Object.keys(obj).filter((key) => obj[key] === max)[0];
 }
+String.prototype.includes = function (str, position = 0) {
+    let strLength = str.length;
+    for (let i = position; i < this.length; i++) {
+        if (this.slice(i, i + strLength) === str) {
+            return true;
+        }
+    }
+    return false;
+};
+console.log("Hello from ALex".includes("from"));
